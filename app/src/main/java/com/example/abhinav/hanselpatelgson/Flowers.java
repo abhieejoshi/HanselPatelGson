@@ -1,22 +1,47 @@
 package com.example.abhinav.hanselpatelgson;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Abhinav on 12/28/2017.
  */
 
-public class Flowers {
+public class Flowers implements Parcelable {
     private int productId;
-    private String category,name;
+    private String category,name,instructions,photo;
     private float price;
+
 
     public Flowers() {
     }
 
-    public Flowers(int productId, String category, String name, float price) {
+
+
+    public Flowers(int productId, String category, String name, float price, String instructions, String photo) {
         this.productId = productId;
         this.category = category;
         this.name = name;
         this.price = price;
+        this.instructions=instructions;
+        this.photo=photo;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(String instructions) {
+
+        this.instructions = instructions;
     }
 
     public int getProductId() {
@@ -58,9 +83,19 @@ public class Flowers {
         stringBuilder.append("Category: "+category+"\n");
         stringBuilder.append("Name: "+name+"\n");
         stringBuilder.append("Price: "+price+"\n");
-
+        stringBuilder.append("Instructions: "+instructions+"\n");
+        stringBuilder.append("photo"+photo);
         return stringBuilder.toString();
 
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
+    }
 }

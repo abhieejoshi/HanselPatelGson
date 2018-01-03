@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/aonboarding_fl_inputs"
+        android:layout_height="330dp"
+        android:layout_weight="0.3"
+        android:layout_width="match_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_previous"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="PREVIOUS" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="Next" />
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/textViewPagesNo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Page No : 1"
+        android:textSize="12sp" />
+</LinearLayout>
